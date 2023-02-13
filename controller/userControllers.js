@@ -28,7 +28,7 @@ const authUser = async(request,response) =>{
     }
     try{
         if (await bcrypt.compare(password, userInfo.rows[0].password)){
-            return response.send({alert: "loged in", data: userInfo.rows[0] })
+            return response.send({alert: "logged in", loginData: userInfo.rows[0] })
             
 
 
