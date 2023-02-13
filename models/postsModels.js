@@ -18,7 +18,7 @@ class Post{
         return pool.query("SELECT * FROM posts");
     }
     static getAllPostFromUser(userid){
-        return pool.query('SELECT * FROM post WHERE userid = $1', [userid])
+        return pool.query('SELECT * FROM posts WHERE userid = $1', [userid])
     }
 
 

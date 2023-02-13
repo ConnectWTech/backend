@@ -11,12 +11,12 @@ const addPosts = async (request, response) => {
 }
 const getAllPost =  async(request,response)=>{
     const allPosts = await post.allPost()
-    response.send(allPosts.rows[0]);
+    response.send(allPosts.rows);
 }
 const getAllUserPost =  async(request,response)=>{
     const id = request.params.id;
     const allPosts = await post.getAllPostFromUser(id)
-    response.send(allPosts.rows[0]);
+    response.send(allPosts.rows);
 }
 
 const deletePosts = async(request,response) =>{
@@ -38,11 +38,12 @@ const updateLike = async(request,response) =>{
     let likes;
     if(addOrSubtract === 'add'){
         likes = await post.updateLikes(1,id)
+        response.status(200).json(`added like to post id:${id}`)
     }else{
         likes = await post.updateLikes(-1,id)
+        response.status(200).json(`subtracted added like to post id:${id}`)
     }
    
-    response.status(200).json("add")
 }
 
 

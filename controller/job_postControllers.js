@@ -24,14 +24,14 @@ const updateJobPost = async (request, response) => {
    
 }
 const getAllJobPost = async(request,response) =>{
-    const allJobPost = await jobPost.allJobPost();
-    response.send(allJobPost.rows[0]);
+    const allJobPost = await jobPost.getAllJobPost();
+    response.send(allJobPost.rows);
 }
 
 const getAllJobsForUser = async(request,response) =>{
     const id = request.params.id;
-    const allUsersJobPost = await jobPost.getAllUsersJobPost(id);
-    response.status(200).json(allUsersJobPost.rows[0]);
+    const allUsersJobPost = await jobPost.getAllJobsForUser(id);
+    response.status(200).json(allUsersJobPost.rows);
 }
 
 

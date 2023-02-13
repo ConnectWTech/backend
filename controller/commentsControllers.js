@@ -29,14 +29,20 @@ const updateLike = async(request,response) =>{
    
     response.status(200).json(likes)
 }
-
+ 
+const getcommentsForPost= async(request,response) =>{
+    const id = request.params.id;
+    const allUsersJobPost = await comments.getAllByID(id);
+    response.status(200).json(allUsersJobPost.rows);
+}
 
 
 
 module.exports ={
     addComment,
     deleteComments,
-    updateLike
+    updateLike,
+    getcommentsForPost
     
 }
 

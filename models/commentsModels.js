@@ -11,7 +11,10 @@ class Comments{
     static updateLikes(addOrSubtract,id){
         return pool.query('UPDATE comments SET likes = (likes + $1) WHERE id = $2',[addOrSubtract,id])
     }
-
+    static getAllByID(userid){
+        return pool.query('SELECT * FROM comments WHERE postid = $1', [userid])
+    }
+    
 }
 
 module.exports = Comments;

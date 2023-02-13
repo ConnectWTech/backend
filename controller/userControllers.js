@@ -20,8 +20,7 @@ const addUser = async (request, response) => {
 }
 
 const authUser = async(request,response) =>{
-    const username = request.params.name;
-    const password = request.params.password;
+    const {username, password} = request.body;
     const userInfo = await user.checkUser(username)
  
     if (userInfo.rows.length === 0 ){
@@ -40,6 +39,17 @@ const authUser = async(request,response) =>{
         return response.send(e)
     }
 }
+const checkUsername = async(request,response) =>{
+    const users = request.params.username;
+    const userInfo = await user.checkUser(users)
+    if(userInfo.rows[0]){
+         return response.send(true)
+    }
+    else{
+        return response.send(false)
+    }
+   
+}
 
 
 
@@ -47,6 +57,7 @@ const authUser = async(request,response) =>{
 module.exports ={
     addUser,
     authUser,
+    checkUsername
     
 }
 
