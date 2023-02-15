@@ -9,7 +9,7 @@ const jobPostRoutes = require('./routes/job_postRoutes');
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5011;
+const port = process.env.PORT || 5021;
 app.use(cors());
 app.use(express.json());
 

@@ -29,9 +29,6 @@ const authUser = async(request,response) =>{
     try{
         if (await bcrypt.compare(password, userInfo.rows[0].password)){
             return response.send({alert: "logged in", loginData: userInfo.rows[0] })
-            
-
-
         }else {
             return response.send({alert:'invalid password'})
         }
