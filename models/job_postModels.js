@@ -12,7 +12,7 @@ class JobPost{
         return pool.query('DELETE FROM job_post WHERE id = $1',[id])
     }
     static getAllJobPost(){
-        return pool.query('SELECT * FROM job_post')
+        return pool.query('SELECT * FROM job_post INNER JOIN users ON users.userid=job_post.userid;')
     }
     static getAllJobsForUser(userid){
         return pool.query('SELECT * FROM job_post WHERE userid = $1', [userid])

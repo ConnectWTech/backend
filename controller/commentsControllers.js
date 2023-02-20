@@ -6,14 +6,14 @@ const addComment = async (request, response) => {
     const {text,userid,postid} = request.body;
     const commentInfo =  await comments.commentOnPost(text,0,userid,postid);
     const insertedComment = commentInfo.rows[0];
-    response.send(insertedComment);
+    return response.send(insertedComment);
    
 }
 
 const deleteComments = async(request,response) =>{
     const id = request.params.id;
     const deleteCommentById = await comments.deleteComment(id)
-    response.status(200).json(deleteCommentById)
+     return response.status(200).json(deleteCommentById)
 }
 
 
@@ -27,13 +27,13 @@ const updateLike = async(request,response) =>{
         likes = await comments.updateLikes(-1,id)
     }
    
-    response.status(200).json(likes)
+    return response.status(200).json(likes)
 }
  
 const getcommentsForPost= async(request,response) =>{
     const id = request.params.id;
-    const allUsersJobPost = await comments.getAllByID(id);
-    response.status(200).json(allUsersJobPost.rows);
+    const allComments = await comments.getAllByID(id);
+    return response.status(200).json(allComments.rows);
 }
 
 

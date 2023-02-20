@@ -38,15 +38,15 @@ exports.seed = async function(knex) {
   ]);
   await knex('posts').del()
   await knex('posts').insert([
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:4},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
-    {title:'loving the project type of work!!!', hashtag:'[blackgirls]',technologys:'[python, java, javascript]', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:4},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
 
   ]);
   await knex('comments').del()

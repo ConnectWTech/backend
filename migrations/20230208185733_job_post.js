@@ -10,7 +10,7 @@ exports.up = function (knex) {
       table.text("bio").notNullable();
       table.string("photo").notNullable();
       table.integer('userid').notNullable;
-      table.foreign("userid").references("id").inTable("users");
+      table.foreign("userid").references("userid").inTable("users");
  
     });
   };

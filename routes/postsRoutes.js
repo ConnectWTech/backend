@@ -8,5 +8,5 @@ router.get('/:id',postControllers.getAllUserPost)
 router.delete('/:id', postControllers.deletePosts)
 router.put('/update', postControllers.updatePost)
 router.put('/:addOrSubtract/:id', postControllers.updateLike)
-
+router.get('/info/:postid',postControllers.getPost)
 module.exports = router;

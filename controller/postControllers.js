@@ -6,17 +6,27 @@ const addPosts = async (request, response) => {
     const {title, hashtag, technologys, bio, photo, url, userid} = request.body;
     const postInfo =  await post.postToDB(title, hashtag, technologys, bio, photo, 0, url, userid);
     const insertedPost = postInfo.rows[0];
-    response.send(insertedPost);
+    return response.send(insertedPost);
    
 }
 const getAllPost =  async(request,response)=>{
     const allPosts = await post.allPost()
-    response.send(allPosts.rows);
+    return response.send(allPosts.rows);
 }
 const getAllUserPost =  async(request,response)=>{
     const id = request.params.id;
     const allPosts = await post.getAllPostFromUser(id)
-    response.send(allPosts.rows);
+    return response.send(allPosts.rows);
+}
+const getPost =  async(request,response)=>{
+    const id = request.params.postid;
+    try{
+        const posts = await post.getAllPostById(id)
+    return response.send(posts.rows);
+    }catch(e){
+        return response.send(e)
+    }
+    
 }
 
 const deletePosts = async(request,response) =>{
@@ -29,7 +39,7 @@ const updatePost = async (request, response) => {
     const {title, hashtag, technologys, bio, photo, url, id} = request.body;
     const updatedPost =  await post.updatePost(title, hashtag, technologys, bio, photo, url, id);
     const postNewInfo = updatedPost.rows[0];
-    response.send(postNewInfo);
+    return response.send(postNewInfo);
    
 }
 const updateLike = async(request,response) =>{
@@ -38,10 +48,10 @@ const updateLike = async(request,response) =>{
     let likes;
     if(addOrSubtract === 'add'){
         likes = await post.updateLikes(1,id)
-        response.status(200).json(`added like to post id:${id}`)
+        response.status(200).json(likes.rows[0])
     }else{
         likes = await post.updateLikes(-1,id)
-        response.status(200).json(`subtracted added like to post id:${id}`)
+        response.status(200).json(likes.rows[0])
     }
    
 }
@@ -55,7 +65,8 @@ module.exports ={
     deletePosts,
     updateLike,
     getAllPost,
-    getAllUserPost
+    getAllUserPost,
+    getPost
     
 }
 

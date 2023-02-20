@@ -10,7 +10,7 @@ class JobApplied{
         return pool.query('SELECT * FROM job_applied WHERE userid = $1 INNER JOIN job_post ON job_applied.jobs_id=job_post.id;',[userid]);
      }
     static getallApplicant(jobsId){
-        return pool.query('SELECT * FROM job_applied WHERE jobs_id = $1 INNER JOIN users ON job_applied.userid=users.id;',[jobsId]);
+        return pool.query('SELECT * FROM job_applied WHERE jobs_id = $1 INNER JOIN users ON job_applied.userid=users.userid;',[jobsId]);
     }
     static declineAccept(userid, status){
         return pool.query('UPDATE job_applied SET accepted_or_denied_or_waiting = $1 WHERE userid = $2 RETURNING *', [status,userid])
