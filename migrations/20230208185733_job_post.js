@@ -6,11 +6,12 @@
 exports.up = function (knex) {
     return knex.schema.createTable("job_post", (table) => {
       table.increments("id").primary();
-      table.string("technologys").notNullable();
+      table.string("technologies").notNullable();
       table.text("bio").notNullable();
-      table.string("photo").notNullable();
+      table.string("title").notNullable();
       table.integer('userid').notNullable;
       table.foreign("userid").references("userid").inTable("users");
+      table.dateTime("created_at").notNullable().defaultTo(knex.raw("CURRENT_TIMESTAMP"));
  
     });
   };

@@ -8,7 +8,7 @@ exports.up = function (knex) {
       table.increments("postid").primary();
       table.string("title").notNullable();
       table.string("hashtag").notNullable();
-      table.string("technologys").notNullable();
+      table.string("technologies").notNullable();
       table.text("bio").notNullable();
       table.string("photo").notNullable();
       table.string("url").notNullable();

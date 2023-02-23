@@ -3,8 +3,8 @@ const {pool} = require('../db.js');
 const post = require('../models/postsModels')
 
 const addPosts = async (request, response) => {
-    const {title, hashtag, technologys, bio, photo, url, userid} = request.body;
-    const postInfo =  await post.postToDB(title, hashtag, technologys, bio, photo, 0, url, userid);
+    const {title, hashtag, technologies, bio, photo, url, userid} = request.body;
+    const postInfo =  await post.postToDB(title, hashtag, technologies, bio, photo, 0, url, userid);
     const insertedPost = postInfo.rows[0];
     return response.send(insertedPost);
    
@@ -36,8 +36,8 @@ const deletePosts = async(request,response) =>{
 }
 
 const updatePost = async (request, response) => {
-    const {title, hashtag, technologys, bio, photo, url, id} = request.body;
-    const updatedPost =  await post.updatePost(title, hashtag, technologys, bio, photo, url, id);
+    const {title, hashtag, technologies, bio, photo, url, id} = request.body;
+    const updatedPost =  await post.updatePost(title, hashtag, technologies, bio, photo, url, id);
     const postNewInfo = updatedPost.rows[0];
     return response.send(postNewInfo);
    

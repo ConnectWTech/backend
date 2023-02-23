@@ -5,11 +5,11 @@ const postsRoutes = require('./routes/postsRoutes');
 const profilesRoutes = require('./routes/profilesRoutes');
 const commentRoutes = require('./routes/commentsRoutes');
 const jobPostRoutes = require('./routes/job_postRoutes');
-
+const applicationRoutes = require('./routes/job_appliedRoutes')
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5020;
+const port = process.env.PORT || 5500;
 app.use(cors());
 app.use(express.json());
 
@@ -18,7 +18,7 @@ app.use('/posts',postsRoutes);
 app.use('/profile',profilesRoutes);
 app.use('/comments', commentRoutes);
 app.use('/job_post',jobPostRoutes)
-
+app.use('/apply', applicationRoutes)
 
 
 

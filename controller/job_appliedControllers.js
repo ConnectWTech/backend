@@ -3,25 +3,46 @@ const {pool} = require('../db.js');
 const jobsApplied = require('../models//job_appliedModels')
 
 const usersJobsApplied = async (request, response) => {
-    const id = request.params.userid;
+    const id = request.params.id;
     const getAppliedJobsInfo =  await jobsApplied.getAllAppliedJobs(id);
-    const allinfo = getAppliedJobsInfo.rows[0];
-    response.send(allinfo);
-   
+    const allinfo = getAppliedJobsInfo.rows;
+    return response.send(allinfo);
 }
 const getAllApplied =  async(request,response)=>{
-    const id = request.params.jobid;
+    const id = request.params.id;
     const allApplied = await jobsApplied.getallApplicant(id)
-    response.send(allApplied.rows[0]);
+    return response.send(allApplied.rows);
+}
+const addApplication = async(request, response) => {
+    const {userid, jobs_id} = request.body;
+    const postInfo =  await jobsApplied.applyToJob(userid, jobs_id, "Waiting");
+    const inserted = postInfo.rows[0];
+    return response.send(inserted);
+   
 }
 
 
-
+const jobInfo = async(request, response) => {
+    const id = request.params.id;
+    const info =  await jobsApplied.job(id);
+    const inserted = info.rows[0];
+    return response.send(inserted);
+   
+}
+ const updateJobResult = async(request,response)=>{
+    const {id, status} = request.body;
+    const info = await jobsApplied.declineAccept(id,status)
+    const json = info
+    return response.send(json.rows[0])
+ }
 
 
 module.exports ={
     usersJobsApplied,
-    getAllApplied
+    getAllApplied,
+    addApplication,
+    jobInfo,
+    updateJobResult
     
 }
 

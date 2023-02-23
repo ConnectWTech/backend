@@ -25,28 +25,28 @@ exports.seed = async function(knex) {
 
   await knex('profile').del()
   await knex('profile').insert([
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:7},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:8},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:9},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:2},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:5},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:10},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:12},
-    {technologys:'[python, java, javascript]', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:1},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:6},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:7},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:8},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:9},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:2},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:5},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:10},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:12},
+    {technologies:'python, java, javascript', bio:'i love to code and i am good at it, what more can you ask for!!! Hire me please ;}', photo:'url', userid:1},
 
   ]);
   await knex('posts').del()
   await knex('posts').insert([
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:4},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
-    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologys:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:4},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:2},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:1},
+    {title:'loving the project type of work!!!', hashtag:'blackgirls',technologies:'python, java, javascript', bio:'I loved my team, we worked so hard and made a great project togethor', photo:'url of a photo',url:'url', likes:200, userid:3},
 
   ]);
   await knex('comments').del()
@@ -65,20 +65,20 @@ exports.seed = async function(knex) {
   
   await knex('job_post').del()
   await knex('job_post').insert([
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:7},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:8},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:9},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:5},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:8},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:7},
-    {technologys:'[python, java, javascript]', bio:'we need a stong team for java', photo:'url', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:7},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:8},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:9},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:5},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:8},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:7},
+    {technologies:'python, java, javascript', bio:'we need a stong team for java', title:'looking for java enigneers', userid:6},
 
   ]);
   await knex('job_applied').del()
