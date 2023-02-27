@@ -15,7 +15,7 @@ class JobPost{
         return pool.query('SELECT * FROM job_post INNER JOIN users ON users.userid=job_post.userid ORDER BY created_at DESC ;')
     }
     static getAllJobsForUser(userid){
-        return pool.query('SELECT * FROM job_post WHERE userid = $1', [userid])
+        return pool.query('SELECT * FROM job_post INNER JOIN users ON users.userid=job_post.userid WHERE job_post.userid = $1 ORDER BY created_at DESC', [userid])
     }
     static getAllJobPostById(id){
         return pool.query('SELECT * FROM job_post WHERE id = $1', [id])

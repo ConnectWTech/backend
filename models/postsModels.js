@@ -18,10 +18,10 @@ class Post{
         return pool.query("SELECT * FROM posts INNER JOIN users ON users.userid=posts.userid ORDER BY created_at DESC ;");
     }
     static getAllPostFromUser(userid){
-        return pool.query('SELECT * FROM posts WHERE userid = $1', [userid])
+        return pool.query('SELECT * FROM posts INNER JOIN users ON users.userid=posts.userid WHERE posts.userid = $1 ORDER BY created_at DESC ;', [userid])
     }
     static getAllPostById(id){
-        return pool.query('SELECT * FROM posts INNER JOIN users ON users.userid=posts.userid WHERE posts.postid = $1', [id])
+        return pool.query('SELECT * FROM posts INNER JOIN users ON users.userid=posts.userid WHERE posts.postid = $1 ORDER BY created_at DESC ;', [id])
     }
 
 }

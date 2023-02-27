@@ -31,7 +31,7 @@ const getAllJobPost = async(request,response) =>{
 const getAllJobsForUser = async(request,response) =>{
     const id = request.params.id;
     const allUsersJobPost = await jobPost.getAllJobsForUser(id);
-    response.status(200).json(allUsersJobPost.rows);
+    return response.status(200).json(allUsersJobPost.rows);
 }
 
 const getJob=  async(request,response)=>{
