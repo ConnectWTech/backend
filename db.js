@@ -3,7 +3,7 @@ const connectionString = 'postgresql://postgres:nIBHIm9NV6OG2vTg9jlE@containers-
 
 const developmentPool = new Pool(
   {
-    database: 'todo4',
+    database: 'CWTech',
     user:     'postgres',
     password: ''
   })
