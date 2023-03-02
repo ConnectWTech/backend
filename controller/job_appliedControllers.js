@@ -32,17 +32,22 @@ const jobInfo = async(request, response) => {
  const updateJobResult = async(request,response)=>{
     const {id, status} = request.body;
     const info = await jobsApplied.declineAccept(id,status)
-    const json = info
-    return response.send(json.rows[0])
+   
+    return response.send(info.rows[0])
  }
-
+ const deletejob = async(request,response)=>{
+    const id = request.params.id;
+    const deletejobById = await jobsApplied.deleteApplication(id)
+    return response.send(deletejobById)
+ }
 
 module.exports ={
     usersJobsApplied,
     getAllApplied,
     addApplication,
     jobInfo,
-    updateJobResult
+    updateJobResult,
+    deletejob
     
 }
 

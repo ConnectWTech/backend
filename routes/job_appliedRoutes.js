@@ -6,7 +6,7 @@ router.get('/user/:id', jobApplyControllers.usersJobsApplied)
 router.get('/info/:id', jobApplyControllers.jobInfo)
 router.get('/job/:id',jobApplyControllers.getAllApplied)
 router.post('/',jobApplyControllers.addApplication)
-// router.delete('/:id', jobApplyControllers.deleteApply)
+router.delete('/:id', jobApplyControllers.deletejob)
 router.put('/update', jobApplyControllers.updateJobResult)
 
 module.exports = router;
